@@ -38,7 +38,7 @@ class HeaderWithBackButton extends StatelessWidget
                       IconlyLight.arrowLeft2,
                       color: kPlaceholderColor,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () => Navigator.pop(context),
                   ),
                 ),
               ),
