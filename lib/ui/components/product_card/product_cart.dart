@@ -24,12 +24,12 @@ class ProductCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
             horizontal: 14, vertical: kDefaultPadding),
         decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-                offset: Offset(12, 26), blurRadius: 50, color: kShadowColor)
-          ],
-          borderRadius: BorderRadius.circular(kDefaultBorder),
-        ),
+            boxShadow: const [
+              BoxShadow(
+                  offset: Offset(12, 26), blurRadius: 50, color: kShadowColor)
+            ],
+            borderRadius: BorderRadius.circular(kDefaultBorder),
+            color: Colors.white),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
