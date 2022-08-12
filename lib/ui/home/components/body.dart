@@ -1,3 +1,4 @@
+import 'package:ffood/constants/constants.dart';
 import 'package:ffood/ui/components/header/header.dart';
 import 'package:ffood/ui/explore_restaurant/explore_restaurant_view.dart';
 import 'package:ffood/ui/home/components/banner_discount.dart';
@@ -14,38 +15,37 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            HeaderScreen(
-              title: "Find Your \nFavorite Food",
-              size: size,
-            ),
-            BannerDiscount(
-              size: size,
-              imageUrl: 'assets/images/ImageVoucher.png',
-              title: "Special Deal For \nAugust",
-            ),
-            SectionTitle(
-              title: "Nearest Restaurant",
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          HeaderScreen(
+            title: "Find Your \nFavorite Food",
+            size: size,
+          ),
+          BannerDiscount(
+            size: size,
+            imageUrl: 'assets/images/ImageVoucher.png',
+            title: "Special Deal For \nAugust",
+          ),
+          SectionTitle(
+            title: "Nearest Restaurant",
+            press: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ExploreRestaurantView(),
+                )),
+          ),
+          NearestRestaurant(size: size),
+          SectionTitle(
+              title: "Popular Menu",
               press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ExploreRestaurantView(),
-                  )),
-            ),
-            NearestRestaurant(size: size),
-            SectionTitle(
-                title: "Popular Menu",
-                press: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const PopularMenuView(),
-                    ))),
-            const PopularMenu()
-          ],
-        ),
+                    builder: (context) => const PopularMenuView(),
+                  ))),
+          const PopularMenu(),
+          kBoxPaddingBottom
+        ],
       ),
     );
   }

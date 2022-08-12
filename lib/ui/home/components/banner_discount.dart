@@ -23,7 +23,7 @@ class BannerDiscount extends StatelessWidget {
       height: 150,
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage(imageUrl)),
-          color: kPrimaryColor,
+          gradient: kPrimaryGradientColor,
           borderRadius: BorderRadius.circular(16)),
       child: Row(
         children: <Widget>[

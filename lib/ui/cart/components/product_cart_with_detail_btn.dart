@@ -37,7 +37,7 @@ class ProductCardWithDetailBtn extends StatelessWidget {
                         color: kShadowColor)
                   ],
             borderRadius: BorderRadius.circular(kDefaultBorder),
-            color: isOrder ? kDisableBackgroundColor : null),
+            color: isOrder ? kDisableBackgroundColor : Colors.white),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
